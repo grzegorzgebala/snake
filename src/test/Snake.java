@@ -19,11 +19,11 @@ public class Snake {
 		body.add(temp);
 		
 		temp = new Rectangle(d, d);
-		temp.setLocation((w / 2 - 1) * d, (h / 2 - 1) * d);
+		temp.setLocation((w / 2 - 1) * d, (h / 2) * d);
 		body.add(temp);
 		
 		temp = new Rectangle(d, d);
-		temp.setLocation((w / 2 - 2) * d, (h / 2 - 2) * d);
+		temp.setLocation((w / 2 - 2) * d, (h / 2) * d);
 		body.add(temp);
 		
 		move = "NOTHING";
@@ -83,6 +83,18 @@ public class Snake {
 
 	public void setBody(ArrayList<Rectangle> body) {
 		this.body = body;
+	}
+	
+	public int getX() {
+		return body.get(0).x;
+	}
+	
+	public int getY() {
+		return body.get(0).y;
+	}
+	
+	public String getMove() {
+		return move;
 	}
 	
 	public void up() {
